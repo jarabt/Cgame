@@ -6,7 +6,14 @@ namespace Cgame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Player myPlayer = new Player(100, "Pepa");
+            Thing sword = new Thing("sword");
+            Thing key = new Thing("key");
+
+            myPlayer.inventory.Add(sword);
+            myPlayer.inventory.Add(key);
+
+            myPlayer.showInventory();
 
         }
     }
