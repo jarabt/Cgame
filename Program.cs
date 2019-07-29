@@ -7,6 +7,7 @@ namespace Cgame
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
         }
     }
 }
