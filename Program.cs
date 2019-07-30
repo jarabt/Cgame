@@ -7,8 +7,10 @@ namespace Cgame
         static void Main(string[] args)
         {
             Player myPlayer = new Player(100, "Pepa");
-            Thing sword = new Thing("sword");
+            Thing sword = new Sword("sword",10);
             Thing key = new Thing("key");
+
+
 
             myPlayer.inventory.Add(sword);
             myPlayer.inventory.Add(key);
