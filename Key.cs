@@ -4,15 +4,14 @@ using System.Text;
 
 namespace Cgame
 {
-    
-    class Sword : Thing
+    public class Key : Thing
     {
-        public int attackPoint { get; }
-        public Sword(string inputName, int inputAttackPoint ):base (inputName)
-        {
-            attackPoint = inputAttackPoint;
-        }
+        public int KeyIdentifier { get; protected set; }
 
+        public Key(string name, int identifier) : base(name)
+        {
+            KeyIdentifier = identifier;
+        }
 
         public override bool UseOnMe(Thing thing)
         {

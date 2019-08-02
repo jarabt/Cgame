@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Cgame
 {
-    class Player
+    public class Player
     {
         public int HP { get; }
         public string name { get; }
@@ -19,11 +19,15 @@ namespace Cgame
 
         public void showInventory()
         {
-            foreach (Thing thing in inventory)
+            for (int i = 0; i < inventory.Count; i++)
             {
-                Console.WriteLine(thing.name);
+                Console.WriteLine($"  {i}: {inventory[i]}");
             }
         }
 
+        public override string ToString()
+        {
+            return $"Jmeno: {name}, HP: {HP}";
+        }
     }
 }
