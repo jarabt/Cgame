@@ -10,11 +10,16 @@ namespace Cgame
         
         static void Main(string[] args)
         {
+            var chest = new Chest("Stara truhla", 42);
+
+            Room[,] Rooms = new Room[10, 10];
+
+            Rooms[0,0] = new Room("Jste v temne mistnosti plne pavouku.", new List<Thing> { chest });
+
             Player = new Player(100, "Pepa");
             Player.inventory.Add(new Key("Stary klic", 42));
 
-            var chest = new Chest("Stara truhla", 42);
-            currentRoom = new Room("Jste v temne mistnosti plne pavouku.", new List<Thing> {chest});
+            currentRoom = Rooms[0, 0];
          
             Console.WriteLine("Hra začíná");
 
