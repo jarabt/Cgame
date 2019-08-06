@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cgame
 {
-    class Room
+   public class Room
     {
         public string Description { get; }
         public List<Thing> Items { get; set; }
