@@ -14,6 +14,7 @@ namespace Cgame
 
             Room[,] Rooms = new Room[10, 10];
 
+
             Rooms[0,0] = new Room("Jste v temne mistnosti plne pavouku.", new List<Thing> { chest });
 
             Player = new Player(100, "Pepa");
